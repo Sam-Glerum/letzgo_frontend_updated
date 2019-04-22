@@ -21,7 +21,6 @@ export class TicketComponent implements OnInit {
     this.ticketService.getTickets()
       .subscribe(tickets => {
         this.ticketsArray = tickets;
-        console.log(this.ticketsArray);
       })
   }
 
