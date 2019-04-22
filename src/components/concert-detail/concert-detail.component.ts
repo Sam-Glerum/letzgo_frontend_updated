@@ -12,9 +12,12 @@ import {Location} from "@angular/common";
   styleUrls: ['./concert-detail.component.css']
 })
 export class ConcertDetailComponent implements OnInit {
-  constructor(private concertService: ConcertService, private route:ActivatedRoute, private ticketService: TicketService, private location: Location, private router: Router) { }
+  constructor(private concertService: ConcertService, private route:ActivatedRoute, private ticketService: TicketService, private location: Location, private router: Router) {
 
-  concert: Concert;
+  }
+
+  // concert: Concert;
+  concert = <any>[];
   concertId = '';
 
   ngOnInit() {
@@ -36,6 +39,7 @@ export class ConcertDetailComponent implements OnInit {
     this.concertService.getConcert(this.concertId)
       .subscribe((concert => {
         this.concert = concert;
+        console.log(concert);
       }));
   };
 
