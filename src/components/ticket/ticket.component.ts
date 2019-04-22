@@ -11,7 +11,7 @@ export class TicketComponent implements OnInit {
 
   constructor(private ticketService: TicketService) { }
 
-  ticketsArray: Ticket[];
+  ticketsArray =  <any>[];
   concertTitle: string;
 
   getTickets(): void {

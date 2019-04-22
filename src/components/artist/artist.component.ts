@@ -11,7 +11,7 @@ export class ArtistComponent implements OnInit {
 
   constructor(private artistService: ArtistService) { }
 
-  artistArray: Artist[];
+  artistArray = [];
 
   getArtists(): void {
     this.artistService.getArtists()

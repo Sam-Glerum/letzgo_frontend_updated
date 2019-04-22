@@ -10,7 +10,7 @@ import {Observable} from "rxjs/index";
   styleUrls: ['./artist-detail.component.css']
 })
 export class ArtistDetailComponent implements OnInit {
-  artist: Artist;
+  artist = <any>[];
   artistId = '';
 
   constructor(private artistService: ArtistService, private route:ActivatedRoute, private router: Router) {

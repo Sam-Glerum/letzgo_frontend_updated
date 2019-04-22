@@ -45,7 +45,7 @@
       <div class="row col-md-12 col-md-offset-1">
         <label>
           artists
-          <div *ngFor="let artist of artistArray.artists">
+          <div *ngFor="let artist of artistArray">
             <input type="checkbox" ng-true-value formControlName="artists">{{artist.name}}
           </div>
         </label>

@@ -24,8 +24,8 @@ export class CreateConcertComponent implements OnInit {
     artists: new FormControl('')
   });
 
-  artistArray: Artist[];
-  artist: Artist;
+  artistArray = [];
+  artist = <any>[];
 
   constructor(private concertService: ConcertService, private artistService: ArtistService, private router: Router) { }
 

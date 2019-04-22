@@ -13,10 +13,10 @@ import {timeout} from "rxjs/internal/operators";
 })
 export class TicketdetailComponent implements OnInit {
 
-  ticket: Ticket;
+  ticket = <any>[];
   ticketId = '';
   concertId = '';
-  concert: Concert;
+  concert = <any>[];
 
   constructor(private ticketService: TicketService, private concertService: ConcertService, private route:ActivatedRoute) { }
 
