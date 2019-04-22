@@ -3,14 +3,11 @@ const path = require('path');
 const http = require('http');
 const compression = require('compression');
 
-let PORT = process.env.PORT || 4200;
-
 const app = express();
 
 // Compress static assets to enhance performance.
 // Decrease the download size of your app through gzip compression:
 app.use(compression());
-
 
 //
 // appname is the name of the "defaultProject" value that was set in the angular.json file.
@@ -29,9 +26,12 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', appname, 'index.html'));
 });
 
+
+console.log("PORT: " + process.env.PORT);
+
+// Get port from environment and store in Express.
+app.set('port', process.env.PORT || 4200);
 // Create HTTP server.
 const server = http.createServer(app);
 // Listen on provided port, on all network interfaces.
-server.listen(PORT, () => {
-  console.log("Letzo Angular running on port " + PORT);
-});
+server.listen(app.get('port'), () => console.log(`Angular app \'${appname}\' running on port ` + app.get('port')));
