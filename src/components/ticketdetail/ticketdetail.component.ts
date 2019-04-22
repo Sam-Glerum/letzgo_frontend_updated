@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Concert} from "../../app/concert";
 import {ConcertService} from "../../app/services/concertService/concert.service";
 import {timeout} from "rxjs/internal/operators";
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-ticketdetail',
@@ -31,15 +32,16 @@ export class TicketdetailComponent implements OnInit {
       .subscribe((ticket => {
         this.ticket = ticket;
         this.concertId = ticket.concert;
-        // console.log("ID" + this.concertId);
       }));
   }
 
   getConcert(): void {
     this.concertService.getConcert(this.concertId)
       .subscribe((concert => {
-          this.concert = concert;
-          console.log(concert);
+        this.concert = concert;
+        for (let i = 0; i < concert.length; i++) {
+
+        }
       }))
   }
 
