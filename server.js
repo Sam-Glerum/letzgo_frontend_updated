@@ -5,6 +5,23 @@ const compression = require('compression');
 
 const app = express();
 
+
+//CORS headers
+server.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', process.env.ALLOW_ORIGIN || 'http://localhost:4200');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, x-access-token');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+
+  if (req.method === 'OPTIONS') {
+    res.status(200);
+    res.end();
+  } else {
+    next();
+  }
+  //next();
+});
+
 // Compress static assets to enhance performance.
 // Decrease the download size of your app through gzip compression:
 app.use(compression());
