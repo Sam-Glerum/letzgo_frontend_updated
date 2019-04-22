@@ -43,6 +43,23 @@ export class ConcertService {
     })
   }
 
+  updateConcert(concertId: string, name: string, date: Date, city: string, street: string, houseNumber: string, zipCode: string,
+                price: number, description: string, artists: string) {
+    this.http.put('https://letzgo.herokuapp.com/api/concerts/' + concertId, {
+      "name": name,
+      "date": date,
+      "city": city,
+      "street": street,
+      "houseNumber": houseNumber,
+      "zipCode": zipCode,
+      "price": price,
+      "description": description,
+      "artists": null
+    }, httpOptions).subscribe((concert) => {
+      console.log("Concert" + concert + "Has been updated");
+    })
+  }
+
   deleteConcert(concertId: string): void {
     this.http.delete('https://letzgo.herokuapp.com/api/concerts/' + concertId, httpOptions).subscribe((concert) => {
       console.log("deleted " + concert);

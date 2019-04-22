@@ -6,10 +6,10 @@
       <mat-card-content><img src="{{artist.picture}}"></mat-card-content>
       <mat-card-content><b>Genre</b> <br> {{artist.genre}}</mat-card-content>
       <mat-card-content><b>Description</b> <br>{{artist.description}}</mat-card-content>
-      <mat-card-content> <b>Discography</b>
-        <br>
-        <p *ngFor="let track of artist.discography">Title: {{track.title}} <br> Release year: {{track.releaseYear}}</p>
-      </mat-card-content>
+      <!--<mat-card-content> <b>Discography</b>-->
+        <!--<br>-->
+        <!--<p *ngFor="let track of artist.discography">Title: {{track.title}} <br> Release year: {{track.releaseYear}}</p>-->
+      <!--</mat-card-content>-->
       <!--<button (click)="openUpdateArtist()">Update artist</button>-->
       <a ><button (click)="openUpdateArtist()">Update artist</button></a>
       <!--<a routerLink="/artistDetail/{{artist._id}}/update"><button>Update artist</button></a>-->
