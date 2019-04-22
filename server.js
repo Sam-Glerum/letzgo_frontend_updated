@@ -30,8 +30,8 @@ app.get('*', (req, res) => {
 });
 
 // Create HTTP server.
-// const server = http.createServer(app);
+const server = http.createServer(app);
 // Listen on provided port, on all network interfaces.
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log("Letzo Angular running on port " + PORT);
 });
