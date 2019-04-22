@@ -34,7 +34,7 @@ export class ArtistDetailComponent implements OnInit {
   }
 
   openUpdateArtist() {
-    this.router.navigate(["/updateArtist"]);
+    this.router.navigate(["/updateArtist/" + this.artistId]);
   }
 
   ngOnInit() {
