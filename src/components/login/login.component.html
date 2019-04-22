@@ -1,0 +1,28 @@
+<br>
+<mat-card class="col-md-4 col-md-offset-4">
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="loginForm">
+  <div class="formWrapper">
+  <div class="row col-md-12 col-md-offset-1">
+  <label>
+    username: <input type="text" formControlName="username">
+  </label>
+  </div>
+  <div class="row col-md-12 col-md-offset-1">
+  <label>
+    password: <input type="password" formControlName="password">
+  </label>
+  </div>
+
+  <div class="row col-md-6" style="margin-left: auto">
+    <button id="loginButton" type="submit" [disabled]="!profileForm.valid"><a routerLink="/concerts">Login</a></button>
+  </div>
+
+  <div class="row col-md-6" style="margin-left: auto">
+    <a routerLink="/register"><button id="registerButton">Click to register</button></a>
+  </div>
+
+  </div>
+</form>
+
+</mat-card>

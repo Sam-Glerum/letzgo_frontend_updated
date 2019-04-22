@@ -1,0 +1,8 @@
+.formWrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#registerButton {
+  float: right;
+}

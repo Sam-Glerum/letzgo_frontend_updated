@@ -1,0 +1,60 @@
+<mat-card class="col-md-4 col-md-offset-4">
+<!-- (ngSubmit)="onSubmit()"-->
+  <form [formGroup]="concertForm" class="loginForm">
+    <div class="formWrapper">
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          Name <input type="text" formControlName="name">
+        </label>
+      </div>
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          date <input type="date" formControlName="date">
+        </label>
+      </div>
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          city <input type="text" formControlName="city">
+        </label>
+      </div>
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          street <input type="text" formControlName="street">
+        </label>
+      </div>
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          houseNumber <input type="text" formControlName="houseNumber">
+        </label>
+      </div>
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          zipCode <input type="text" formControlName="zipCode">
+        </label>
+      </div>
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          price <input type="number" step="0.01" formControlName="price">
+        </label>
+      </div>
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          Description <input type="text" formControlName="description">
+        </label>
+      </div>
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          artists
+          <div *ngFor="let artist of artistArray.artists">
+            <input type="checkbox" ng-true-value formControlName="artists">{{artist.name}}
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="row col-md-6" style="margin-left: auto">
+      <button id="loginButton"  (click)="addConcert()" [disabled]="!concertForm.valid">Submit</button>
+    </div>
+  </form>
+
+</mat-card>

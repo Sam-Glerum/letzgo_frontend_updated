@@ -1,0 +1,43 @@
+#loginButton {
+  margin-right: auto;
+}
+
+#logoutButton {
+  margin-left: auto;
+}
+
+#loginInfo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mat-toolbar {
+  display: flex;
+}
+
+.mainHeading {
+  text-align: center;
+}
+
+.myMenuBar {
+  background-color: #FFFFFF;
+  border: 1px solid #b0b0b0;
+}
+
+.mat-toolbar {
+  background-color: #FFC600;
+  border-radius: 0.5em;
+}
+
+.toolbar_button {
+  flex: 1 1 auto;
+}
+
+#toolbarButtons {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper {
+  min-height: calc(100vh - 87px);
+}

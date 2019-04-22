@@ -1,0 +1,14 @@
+<div id="buttonDiv" class="row">
+  <button id="addButton" class="col-md-2 col-md-offset-5" mat-fab routerLink="/artists/addArtist">Add artist</button>
+</div>
+
+<div class="row" id="artistList">
+  <div *ngFor="let artist of artistArray.artists">
+  <a routerLink="/artistDetail/{{artist._id}}">
+<mat-card class="col-md-6 col-md-offset-3 concertCard">
+  <!--<mat-card>-->
+  <mat-card-title>{{artist.name}}</mat-card-title>
+</mat-card>
+  </a>
+  </div>
+</div>

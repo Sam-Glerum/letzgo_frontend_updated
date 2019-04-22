@@ -1,0 +1,6 @@
+<div class="row">
+  <mat-card class="col-md-6 ticketCard" *ngFor="let ticket of ticketsArray.tickets">
+    <!--<mat-card>-->
+    <a routerLink="/ticketDetail/{{ticket.id}}"><mat-card-title>{{ticket.concert}}</mat-card-title></a>
+  </mat-card>
+</div>

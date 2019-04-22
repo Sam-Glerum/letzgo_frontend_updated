@@ -1,0 +1,33 @@
+<mat-card class="col-md-4 col-md-offset-4">
+
+  <form [formGroup]="artistForm" (ngSubmit)="onSubmit()" class="loginForm">
+    <div class="formWrapper">
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          Name <input type="text" formControlName="name">
+        </label>
+      </div>
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          Image URL <input type="text" formControlName="imageUrl">
+        </label>
+      </div>
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          Genre <input type="text" formControlName="genre">
+        </label>
+      </div>
+      <div class="row col-md-12 col-md-offset-1">
+        <label>
+          Description <input type="text" formControlName="description">
+        </label>
+      </div>
+
+      <div class="row col-md-6" style="margin-left: auto">
+        <button id="loginButton"  (click)="addArtist()" [disabled]="!artistForm.valid">Submit</button>
+      </div>
+
+    </div>
+  </form>
+
+</mat-card>

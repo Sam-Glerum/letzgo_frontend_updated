@@ -1,0 +1,17 @@
+#backButton {
+  float: right;
+}
+
+.concertInfo {
+  margin-top: 2em;
+}
+
+.mat-card {
+  color: white;
+  background-color: #4088FF;
+}
+
+.mat-card-title {
+  text-align: center;
+  text-decoration: underline;
+}

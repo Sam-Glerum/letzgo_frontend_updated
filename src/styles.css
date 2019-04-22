@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+/*html {*/
+  /*!*background-color: #4088FF ;*!*/
+  /*background-image: url("/assets/images/jeff-mills-bottle-ravejungle.jpg") !important;*/
+
+/*}*/
+
+.container-fluid {
+  background-image: url("/assets/images/jeff-mills-bottle-ravejungle.jpg") !important;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.mat-card {
+  color: white;
+  background-color: #4088FF;
+}
+
+.mat-card-title {
+  text-align: center;
+  text-decoration: underline;
+}
+

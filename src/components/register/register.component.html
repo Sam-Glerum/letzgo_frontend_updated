@@ -1,0 +1,34 @@
+<h1>Register</h1>
+
+<mat-card class="col-md-4 col-md-offset-4">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="registerForm">
+  <div class="row">
+    <label>
+      Username
+      <input type="text" formControlName="username">
+    </label>
+  </div>
+  <div class="row">
+    <label>
+      Email
+      <input type="text" formControlName="email">
+    </label>
+  </div>
+  <div class="row">
+    <label>
+      Password
+      <input type="password" formControlName="password">
+    </label>
+  </div>
+  <div class="row">
+    <label>
+      Repeat password
+      <input type="password" formControlName="repeatPassword">
+    </label>
+  </div>
+    <div class="row">
+      <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    </div>
+  </form>
+
+</mat-card>
