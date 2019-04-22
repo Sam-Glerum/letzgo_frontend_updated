@@ -20,6 +20,7 @@ import { TicketdetailComponent } from '../components/ticketdetail/ticketdetail.c
 import { AddArtistComponent } from '../components/add-artist/add-artist.component';
 import { UpdateArtistComponent } from '../components/update-artist/update-artist.component';
 import { CreateConcertComponent } from '../components/create-concert/create-concert.component';
+import { UpdateConcertComponent} from '../components/update-concert/update-concert.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CreateConcertComponent } from '../components/create-concert/create-conc
     TicketdetailComponent,
     AddArtistComponent,
     UpdateArtistComponent,
-    CreateConcertComponent
+    CreateConcertComponent,
+    UpdateConcertComponent
   ],
   imports: [
     BrowserModule,

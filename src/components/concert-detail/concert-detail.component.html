@@ -7,6 +7,8 @@
       <mat-card-content><b>Address</b> <br> {{concert.street}} {{concert.houseNumber}}, {{ concert.zipCode}} {{ concert.city }}</mat-card-content>
       <mat-card-content><b>Price</b> <br> {{concert.price}},-</mat-card-content>
       <button class="buyButton" mat-raised-button color="primary" (click)="buyTicket()">Buy Ticket</button>
+      <!--<a routerLink="updateConcert/{{concert._id}}"><button class="buyButton" mat-raised-button color="primary">Update Concert</button></a>-->
+      <button class="buyButton" mat-raised-button color="primary" (click)="openUpdate()">Update Concert</button>
       <button class="deleteButton" mat-raised-button color="primary" (click)="deleteConcert()">Delete Concert</button>
       <button id="backButton" mat-raised-button color="primary" (click)="goBack()">Go Back</button>
     </mat-card>

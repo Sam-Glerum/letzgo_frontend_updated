@@ -11,7 +11,7 @@
         <p *ngFor="let track of artist.discography">Title: {{track.title}} <br> Release year: {{track.releaseYear}}</p>
       </mat-card-content>
       <!--<button (click)="openUpdateArtist()">Update artist</button>-->
-      <a routerLink="/updateArtist/{{artist._id}}"><button>Update artist</button></a>
+      <a routerLink="updateArtist/{{artist._id}}"><button>Update artist</button></a>
       <!--<a routerLink="/artistDetail/{{artist._id}}/update"><button>Update artist</button></a>-->
       <button (click)="deleteArtist()">Delete artist</button>
       <a routerLink="/artists"><button>Go Back</button></a>

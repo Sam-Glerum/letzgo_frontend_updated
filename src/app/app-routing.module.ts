@@ -14,6 +14,7 @@ import { AuthenticationGuardService } from "./services/authenticationGuardServic
 import {AddArtistComponent} from "../components/add-artist/add-artist.component";
 import {UpdateArtistComponent} from "../components/update-artist/update-artist.component";
 import {CreateConcertComponent} from "../components/create-concert/create-concert.component";
+import {UpdateConcertComponent} from '../components/update-concert/update-concert.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path: 'tickets', component: TicketComponent, canActivate: [AuthenticationGuardService]},
   {path: 'ticketDetail/:id', component: TicketdetailComponent, canActivate: [AuthenticationGuardService]},
   {path: 'updateArtist/:id', component: UpdateArtistComponent, canActivate: [AuthenticationGuardService]},
+  {path: 'updateConcert/:id', component: UpdateConcertComponent, canActivate: [AuthenticationGuardService]}
   ];
 
 @NgModule({

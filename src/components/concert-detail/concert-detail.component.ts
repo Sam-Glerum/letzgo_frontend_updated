@@ -35,6 +35,10 @@ export class ConcertDetailComponent implements OnInit {
     this.location.back();
   }
 
+  openUpdate() {
+    this.router.navigate(["updateConcert/" + this.concertId]);
+  }
+
   getConcert(): void {
     this.concertService.getConcert(this.concertId)
       .subscribe((concert => {
