@@ -29,10 +29,8 @@ export class TicketService {
 
   addTicket(concertId, userId) {
     this.http.post(url + '/' + concertId + '/' + userId, httpOptions)
-      .subscribe(res => {
+      .subscribe((res) => {
         console.log("response:" +res)
-      }, error => {
-        console.log(error);
-      });
+      })
   }
 }

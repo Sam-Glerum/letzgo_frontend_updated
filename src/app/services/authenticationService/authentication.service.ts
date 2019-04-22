@@ -44,6 +44,10 @@ export class AuthenticationService {
       );
   }
 
+  getUser(username: string) {
+    this.http.get<any>(this.apiUrl)
+  }
+
 
   logout() {
     localStorage.removeItem("Token");

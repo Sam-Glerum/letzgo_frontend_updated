@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TicketService} from "../../app/services/ticketService/ticket.service";
 import {Ticket} from "../../app/ticket";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
 import {Concert} from "../../app/concert";
 import {ConcertService} from "../../app/services/concertService/concert.service";
 import {timeout} from "rxjs/internal/operators";
@@ -18,7 +18,7 @@ export class TicketdetailComponent implements OnInit {
   concertId = '';
   concert = <any>[];
 
-  constructor(private ticketService: TicketService, private concertService: ConcertService, private route:ActivatedRoute) { }
+  constructor(private ticketService: TicketService, private concertService: ConcertService, private route:ActivatedRoute, private router: Router) { }
 
   getTicketId(): void {
     this.route.params.subscribe(param => {
@@ -31,19 +31,20 @@ export class TicketdetailComponent implements OnInit {
       .subscribe((ticket => {
         this.ticket = ticket;
         this.concertId = ticket.concert;
-        console.log("ID" + this.concertId);
+        // console.log("ID" + this.concertId);
       }));
   }
 
   getConcert(): void {
     this.concertService.getConcert(this.concertId)
       .subscribe((concert => {
-        if (this.concertId === concert.id) {
           this.concert = concert;
-          console.log(this.concert);
-        }
-
+          console.log(concert);
       }))
+  }
+
+  goBack() {
+    this.router.navigate(["/tickets"]);
   }
 
   ngOnInit() {

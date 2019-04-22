@@ -16,14 +16,14 @@ export class UpdateConcertComponent implements OnInit {
   concert: Concert;
 
   concertName = '';
-  concertDate = '';
+  concertDate: Date;
   concertCity = '';
   concertStreet = '';
   concertHouseNumber = '';
   concertZipCode = '';
-  concertPrice = '';
+  concertPrice: number;
   concertDescription = '';
-  concertArtists = '';
+  concertArtists = <any>[];
 
 
   concertForm = new FormGroup({

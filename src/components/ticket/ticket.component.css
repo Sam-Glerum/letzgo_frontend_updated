@@ -1,0 +1,24 @@
+.ticketCard {
+  /*flex: 1 0 auto;*/
+  text-align: center;
+  /*margin: 0.5em;*/
+  /*width: 40%;*/
+  background-color: #4088FF;
+  margin-top: 1em;
+  padding: 2em;
+  border: 3px solid;
+}
+
+.mat-card-title {
+  color: white;
+  text-decoration: none;
+}
+
+.mat-card:hover {
+  background-color: #0d3349;
+}
+
+a:hover {
+  background-color: #0d3349;
+}
+

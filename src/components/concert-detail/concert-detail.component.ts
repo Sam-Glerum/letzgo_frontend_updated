@@ -53,9 +53,10 @@ export class ConcertDetailComponent implements OnInit {
   }
 
   buyTicket(): void {
+    let username = localStorage.getItem("Username");
     console.log("concert: " + this.concertId);
     console.log("username: " + localStorage.getItem("Username"));
-    this.ticketService.addTicket(this.concertId, localStorage.getItem("Username"));
+    this.ticketService.addTicket(this.concertId, username);
   }
 
 }
