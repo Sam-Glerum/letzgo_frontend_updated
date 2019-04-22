@@ -11,13 +11,15 @@ export class ConcertComponent implements OnInit {
 
   constructor(private concertService: ConcertService) {
   }
-  concertsArray: Concert[];
+  concertsArray = [];
+
 
 
   getConcerts(): void {
     this.concertService.getConcerts()
       .subscribe(concerts => {
         this.concertsArray = concerts;
+        console.log(this.concertsArray);
       });
   }
 
