@@ -39,9 +39,6 @@ export class TicketdetailComponent implements OnInit {
     this.concertService.getConcert(this.concertId)
       .subscribe((concert => {
         this.concert = concert;
-        for (let i = 0; i < concert.length; i++) {
-
-        }
       }))
   }
 

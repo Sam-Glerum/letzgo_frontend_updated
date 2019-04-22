@@ -31,7 +31,7 @@ export class TicketComponent implements OnInit {
       })
   }
 
-  getConcert(concertId): Concert {
+  getConcert(concertId) {
     let newConcert : Concert;
     this.concertService.getConcert(concertId)
       .subscribe((concert) => {
